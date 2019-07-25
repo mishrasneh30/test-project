@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'master' }
+    agent { dockerfile true }
     stages {
         stage('Build') {
             steps('Build Steps'){
@@ -20,8 +20,8 @@ pipeline {
             steps('Synopsys Detect'){
                 
                 script{
-                        synopsys_detect '--detect.project.name="DeclarativePipelineNew"'
-                        //String args ="--blackduck.url='https://qa-hub37.dc1.lan' --blackduck.username=sysadmin --blackduck.password=blackduck --blackduck.trust.cert=true --detect.project.name=Mattersight" synopsys_detect args 
+                        synopsys_detect '--detect.project.name="DeclarativeWithDocker1"'
+                         
                     }
             }
             
