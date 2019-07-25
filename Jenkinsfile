@@ -21,7 +21,7 @@ pipeline {
                 
                 script{
                         synopsys_detect '--detect.project.name="DeclarativeWithDocker1"'
-                         
+                        
                     }
             }
             
